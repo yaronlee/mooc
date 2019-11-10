@@ -12,12 +12,18 @@ public class Version4Test {
         List<Sku> cartSkuList = CartService.getCartSkuList();
 
         //过滤商品大于2000的商品
-        List<Sku> skus = CartService.filterSkus(cartSkuList, new SkuTotalPricePredicate());
-        //过滤图书商品
-        List<Sku> skus2 = CartService.filterSkus(cartSkuList, new SkuBooksCategoryPredicate());
+        List<Sku> skus = CartService
+                .filterSkus(cartSkuList, new SkuTotalPricePredicate());
 
-        System.out.println(JSON.toJSONString(skus, true));
-        System.out.println(JSON.toJSONString(skus2, true));
+        //过滤图书商品
+        List<Sku> skus2 = CartService
+                .filterSkus(cartSkuList, new SkuBooksCategoryPredicate());
+
+        System.out.println(
+                JSON.toJSONString(skus, true));
+
+        System.out.println(
+                JSON.toJSONString(skus2, true));
     }
 
 }

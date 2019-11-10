@@ -16,7 +16,8 @@ public class FileServiceTest {
         fileService.fileHandle("D:\\ideaProject\\mooc\\Stream996\\src" +
                         "\\main\\java\\lambda\\file\\FileConsumer.java",
                 fileContent -> {
-                    System.out.println(fileContent);    //先打印出来
+                    System.out.println(fileContent);//先打印出来
+                    System.out.println("文本长度为：" + fileContent.length());
                 });
     }
 }

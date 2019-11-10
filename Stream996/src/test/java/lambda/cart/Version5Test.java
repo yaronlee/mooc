@@ -18,7 +18,6 @@ public class Version5Test {
             }
         });
 
-
         System.out.println(JSON.toJSONString(skus, true));
     }
 }

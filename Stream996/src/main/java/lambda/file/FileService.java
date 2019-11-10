@@ -20,7 +20,7 @@ public class FileService {
                 new InputStreamReader(
                         new FileInputStream(url)));
 
-        //定义行变量，和内容StringBuilder
+        //定义行变量（存储每一行），和内容的StringBuilder（存储整个文件）
         String line;
         StringBuilder stringBuilder = new StringBuilder();
 
